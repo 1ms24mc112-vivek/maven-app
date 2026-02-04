@@ -1,13 +1,11 @@
 package com.example.maven_app;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootTest
-class MavenAppApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
+@SpringBootApplication(scanBasePackages = "com.example")
+public class MavenAppApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MavenAppApplication.class, args);
+    }
 }
