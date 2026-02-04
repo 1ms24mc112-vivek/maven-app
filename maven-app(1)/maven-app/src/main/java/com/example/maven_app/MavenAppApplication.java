@@ -3,11 +3,9 @@ package com.example.maven_app;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class MavenAppApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(MavenAppApplication.class, args);
-	}
-
+@SpringBootApplication(scanBasePackages = "com.example")
+public class MavenAppApplicationTests {
+    public static void main(String[] args) {
+        SpringApplication.run(MavenAppApplication.class, args);
+    }
 }
