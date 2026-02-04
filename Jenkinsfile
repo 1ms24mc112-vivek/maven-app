@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git url: '<github_repo_ssh_url>', branch: 'main'
+                git url: 'https://github.com/1ms24mc112-vivek/maven-app.git', branch: 'main'
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub112') {
                         dockerImage.push("latest")
                     }
                 }
