@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "<dockerhub_username>/my_maven_app"
+        IMAGE_NAME = "viveknshet112/maven-app"
     }
 
     stages {
